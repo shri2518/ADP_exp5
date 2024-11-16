@@ -1,0 +1,82 @@
+<html>
+<head><title>Student Registration</title>
+<script language="javascript">
+function checkForm(form)
+{
+for(var i=0;i<form.elements.length;i++)
+{
+if(form.elements[i].value=="")
+{
+alert("fill out all fields")
+return false
+}
+}
+function addNumbers()
+{
+var m1= parseInt(document.getElementById("m1").value);
+var m2 = parseInt(document.getElementById("m2").value);
+var m3 = parseInt(document.getElementById("m3").value);
+var ans = document.getElementById("answer");
+ans.value = m1+m2+m3;
+}
+msg=open("","newwindow","");
+msg.document.write("<h3>","REGISTRATION COMPLETED
+SUCESSFULLY","<br>","</h3>");
+msg.document.write("<h2>","DETAILS FOR THE STUDENT:","<br>","</h2>");
+var n1=mf.Name.value
+msg.document.write("<b>","<left>","Name : ",n1,"</left>");
+msg.document.write("<br>","<b>","MARKS SECURED","</left>");
+
+var m1=mf.maths.value
+msg.document.write("<br>","<b>","Maths :",m1,"</left>");
+var m2=mf.physics.value
+msg.document.write("<br>","<b>","Physics :",m2,"</left>");
+var m3=mf.chemistry.value
+msg.document.write("<br>","<b>","Chemistry :",m3,"</left>");
+msg.document.write("<br>","<b>","CUT-OFF MARKS SECURED","</left>");
+var add=mf.address.value
+for(var k=0;k<mf.course.length;k++)
+{
+if(mf.course[k].checked)
+{ break; }
+}
+msg.document.write("<br>","<b>","You are selected
+for",mf.course[k].value,"course","<left>");
+return true
+}
+</script></head>
+<body bgcolor="aqua">
+<h1 align="center">SRI KRISHNA COLLEGE OF TECHNOLOGY </h1>
+<h2 align="center"> STUDENT REGISTRATION FORM</h2><hr> <p
+align="left">
+<form id=mf onSubmit="return checkForm(this)">
+NAME <input type="text" name="Name" value="" maxlength="50" /><br><br>
+AGE <input type="text" name="Age" /><br><br>
+DATE OF BIRTH <input type="text" name="date" size=4/>
+<input type="text" name="month" size="5"/>
+<input type="text" name="year" size="5"/><br><br>
+<h4>Gender</h4>
+<input type="checkbox" name="gender"/>MALE
+
+<input type="checkbox" name="gender"/>FEMALE<br><br>
+QUALIFICATION<select name="qualification">
+<option value="Highersecondary">Choose Your Option</option>
+<option value="Highersecondary">HIGHER SECONDARY</option>
+<option value="Diploma">DIPLOMA</option>
+</select><br><br>
+<h3>MARKS SECURED</h3>
+MATHS <input type="text" name="maths" val="0" size=20/><br><br> PHYSICS
+<input type="text" name="physics" val="0" size=20/><br><br> CHEMISTRY
+<input type="text" name="chemistry" val="0" size=20/><br><br>
+<br>ADDRESS<br><textarea name="address" rows="5" cols="40"> </textarea>
+<h4>SELECT COURSE</h4>
+<input type="radio" name="course" value="CSE">CSE<br>
+<input type="radio" name="course" value="ECE">ECE<br>
+<input type="radio" name="course" value="IT">IT<br>
+<input type="radio" name="course" value="EEE">EEE<br>
+<input type="radio" name="course" value="BIOTECH">BIOTECH<br>
+<input type="radio" name="course" value="MECH">MECHANICAL<br>
+<input type="radio" name="course" value="CIVIL">CIVIL<br> <input
+type="submit" value="Submit"><input type="reset" value="reset"></p>
+</form></body>
+</html>
